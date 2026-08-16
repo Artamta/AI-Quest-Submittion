@@ -1,0 +1,78 @@
+{
+  "checkpoint_provenance_not_an_upload_file": {
+    "path": "/storage/raj.ayush/s2s_final_data/final_iteration/ai_quest_precip_20260813/runs/split17_2_1_screen_20260816a_tp_only_w16_seed42/checkpoints/best.pt",
+    "sha256": "719000eb7984a9712595564a6189a93fda024ca3f94d4b4afcc425270847273d"
+  },
+  "climatology": {
+    "kind": "public_era5_lagged_proxy",
+    "period_1": "/home/raj.ayush/s2s/s2s_anlysis/clean/ai-quest-global/handoff/20260813/climatology_proxy_2003_2022_nonnegative/pr_20260813_p1_climatology_proxy.nc",
+    "period_1_sha256": "d1ea0b6707ed0995b8fe870dde9598bc65b4d3f69ea4900293c61d4e35b5473f",
+    "period_2": "/home/raj.ayush/s2s/s2s_anlysis/clean/ai-quest-global/handoff/20260813/climatology_proxy_2003_2022_nonnegative/pr_20260813_p2_climatology_proxy.nc",
+    "period_2_sha256": "d85839b31bbfa18b30215c6ea9e6e6ac4d54b0eedb2a9c60a5e3fa02874805b4"
+  },
+  "created_utc": "2026-08-16T16:05:09.177500+00:00",
+  "files": [
+    {
+      "filename": "pr_20260813_p1_probabilities_only.nc",
+      "maximum_probability": 0.6815094351768494,
+      "minimum_probability": 0.07645256817340851,
+      "path": "/home/raj.ayush/s2s/s2s_anlysis/clean/ai-quest-global/handoff/20260813/AI_QUEST_LEADER_HANDOFF_PROXY_PREVIEW/pr_20260813_p1_probabilities_only.nc",
+      "period": 1,
+      "probability_sum_max_error": 1.6391277313232422e-07,
+      "sha256": "7dc4252a6c9480f09b382f454b1c26b338098da88f274061111d527cde83050c",
+      "shape": [
+        5,
+        121,
+        240
+      ]
+    },
+    {
+      "filename": "pr_20260813_p2_probabilities_only.nc",
+      "maximum_probability": 0.7048946619033813,
+      "minimum_probability": 0.0696423128247261,
+      "path": "/home/raj.ayush/s2s/s2s_anlysis/clean/ai-quest-global/handoff/20260813/AI_QUEST_LEADER_HANDOFF_PROXY_PREVIEW/pr_20260813_p2_probabilities_only.nc",
+      "period": 2,
+      "probability_sum_max_error": 1.6391277313232422e-07,
+      "sha256": "61f5d778991040edde6df1ddee2f6f415d64036ae16db7272570adb9539276b0",
+      "shape": [
+        5,
+        121,
+        240
+      ]
+    }
+  ],
+  "issue_date": "20260813",
+  "leader_must": [
+    "Replace proxy climatology and rerun prediction if climatology.kind is not official_ai_wq_downloads.",
+    "Create the official AI-WQ templates using the registered team, model and password.",
+    "Copy these probability values into those official templates and run package validation.",
+    "Upload both periods and retain the remote acceptance receipt."
+  ],
+  "not_uploadable_reasons": [
+    "NetCDF files are probabilities-only handoff files, not official AI-WQ package templates.",
+    "The current forecast uses a public ERA5 2003-2022 proxy climatology, not the official downloads.",
+    "Registered team/model identity, password, permission record and remote acceptance are absent."
+  ],
+  "performance": {
+    "comparison_file": "/storage/raj.ayush/s2s_final_data/final_iteration/ai_quest_precip_20260813/selections/split17_2_1_screen_20260816a_validation_only/comparison.csv",
+    "comparison_file_sha256": "666dd99a98e6c79dd4f8989c71b3c249fb8aca66e4c1b8a6b81ec218d712877c",
+    "live_forecast_score_status": "unavailable_until_observations_and_official_evaluation",
+    "scope": "validation_only; not an official competition score",
+    "test_status": "sealed_not_evaluated",
+    "validation_rps_d19_25": 0.794047735842083,
+    "validation_rps_d26_32": 0.7995085580956995,
+    "validation_rps_pooled": 0.7967781469688913,
+    "validation_rpss_d19_25": 0.03579035046559875,
+    "validation_rpss_d26_32": 0.02913928333015736,
+    "validation_rpss_pooled": 0.03246485116534936
+  },
+  "schema": "ai-wq-precip-leader-handoff-v1",
+  "source_forecast": "/home/raj.ayush/s2s/s2s_anlysis/clean/ai-quest-global/handoff/20260813/precip_probabilities_20260813.npz",
+  "source_forecast_sha256": "c528de2bc634d6a6de2cee8919f0fbe42d3638d94499650ca0b598c2d772bfc3",
+  "source_prediction_manifest": "/home/raj.ayush/s2s/s2s_anlysis/clean/ai-quest-global/handoff/20260813/precip_probabilities_20260813.manifest.json",
+  "source_prediction_manifest_sha256": "16f933975d8400173beea483c8b018e56f143f3508cdf1537a59fe444f39638c",
+  "status": "leader_handoff_probabilities_only_requires_official_packaging",
+  "submission_ready": false,
+  "variable": "pr",
+  "winner": "calibrated_neural_tp_only_w16_seed42"
+}
